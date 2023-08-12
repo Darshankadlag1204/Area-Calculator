@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Area Calculator</title>
+    <link rel="icon" href="calci.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="myjs.js"></script>
+</head>
+<body>
+    <center>
+        <div id="whiteLayer">
+        <h1>Area Calculator by Darshan Kadlag</h1>
+        <form id="calculatorForm">
+            <div id="shapes">
+                <label for="shape">Select Shape:</label>
+                <select id="shape" onchange="changeShape()">
+                    <option value="rectangle">Rectangle</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="square">Square</option>
+                    <option value="circle">Circle</option>
+                </select>
+            </div>
+            <div id="inputs">
+                <!-- Rectangle Inputs -->
+                <div id="rectangleInputs">
+                    <label for="rectLength">Length:</label>
+                    <input type="text" id="rectLength" />
+                    <select id="rectLengthUnit">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="in">inches</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                    <label for="rectWidth">Width:</label>
+                    <input type="text" id="rectWidth" />
+                    <select id="rectWidthUnit">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="in">inches</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                </div>
+                <!-- Triangle Inputs -->
+                <div id="triangleInputs" style="display: none;">
+                    <label for="triBase">Base:</label>
+                    <input type="text" id="triBase" />
+                    <select id="triBaseUnit">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="in">inches</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                    <label for="triHeight">Height:</label>
+                    <input type="text" id="triHeight" />
+                    <select id="triHeightUnit">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="in">inches</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                </div>
+                <!-- Square Input -->
+                <div id="squareInput" style="display: none;">
+                    <label for="squareSide">Side:</label>
+                    <input type="text" id="squareSide" />
+                    <select id="squareSideUnit">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="in">inches</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                </div>
+                <!-- Circle Input -->
+                <div id="circleInput" style="display: none;">
+                    <label for="circleRadius">Radius:</label>
+                    <input type="text" id="circleRadius" />
+                    <select id="circleRadiusUnit">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="in">inches</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calculateArea()">Calculate Area</button>
+            </div>
+            <div id="output" style="display: none;">
+                <div id="outputBox">
+                    <label for="areaOutput">Area:</label>
+                    <span id="areaOutput"></span> 
+                    <select id="outputUnit" onchange="convertOutput()">
+                        <option value="cm">cm²</option>
+                        <option value="mm">mm²</option>
+                        <option value="in">sq. inches</option>
+                        <option value="ft">sq. feet</option>
+                        <option value="m">m²</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        </div>
+    </center>
+</body>
+</html>
